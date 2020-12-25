@@ -15,7 +15,7 @@ module.exports = {
         filename: 'index.[contenthash].js'
     },
     plugins: [new HtmlWebpackPlugin({  // Also generate a test.html
-        title: '立',
+        title: '立-dev',
         template: 'src/assets/index.html'
     }), new MiniCssExtractPlugin({
         // Options similar to the same options in webpackOptions.output

@@ -15,8 +15,8 @@
     "webpack-dev-server": "^3.11.0"
   },
   "scripts": {
-    "start": "webpack serve",
-    "build": "rm -rf dist && webpack",
+    "start": "webpack serve --config webpack.config.js",
+    "build": "rm -rf dist && webpack --config webpack.config.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

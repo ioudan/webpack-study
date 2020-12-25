@@ -1,3 +1,3 @@
 import './x.scss'
-import './y.scss'
+import './y.less'
 export default 'x js'

@@ -7,27 +7,32 @@ module.exports = {
         filename: 'index.[contenthash].js'
     },
     plugins: [
-      new HtmlWebpackPlugin({
-        title: '立',
-        template: 'src/assets/index.html'
-    })],
+        new HtmlWebpackPlugin({
+            title: '立',
+            template: 'src/assets/index.html'
+        })],
     module: {
         rules: [
-          {
-            test: /\.scss$/i,
-            use: [
-              "style-loader",
-              "css-loader",
-              {
-                loader: 'sass-loader',
-                 options: {
-                  implementation: require('dart-sass'),
-                 },
-                },
-            ],
-          },
+            {
+                test: /\.less$/,
+                // loader: "less-loader",
+                use: ['style-loader','css-loader','less-loader'],
+            },
+            {
+                test: /\.scss$/i,
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            implementation: require('dart-sass'),
+                        },
+                    },
+                ],
+            },
         ],
-      },
+    },
 };
 
 
